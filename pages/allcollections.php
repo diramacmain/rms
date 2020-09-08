@@ -2,7 +2,7 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">Collections</h4>
-                  <p class="card-category">list of my collections</p>
+                  <p class="card-category">list of all collections</p>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">

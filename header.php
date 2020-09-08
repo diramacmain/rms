@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
    <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+<link rel="stylesheet" href="./css/style.css"/>
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 

@@ -16,6 +16,13 @@ function activePage($page)
         <p>Dashboard</p>
     </a>
 </li>
+<li class="nav-item <?php activePage("request_loan");?>">
+    <a class="nav-link" href="./index.php?page=request_loan">
+        <i class="material-icons">assignment</i>
+        <p>Request Loan</p>
+    </a>
+</li>
+<!--
 <li class="nav-item <?php activePage("requests");?>">
     <a class="nav-link" href="./index.php?page=requests">
         <i class="material-icons">assignment</i>
@@ -40,3 +47,4 @@ function activePage($page)
         <p>Collections</p>
     </a>
 </li>
+-->

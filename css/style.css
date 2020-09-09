@@ -2,4 +2,25 @@
     background-color: white !important; 
     color:#333 !important;
 }
-
+#addClientForm h3> i{
+    vertical-align: middle;
+    font-size: 30px;
+}
+#addClientForm button{
+    height: 30px;
+    padding-top: 0px;
+    padding-bottom:0px;
+    vertical-align: middle;
+}
+#addClientForm input{
+    border:solid 1px rgb(200,200,200);
+    padding: 3px;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+#addClientForm{
+    padding:2em;
+    padding-top: 1em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 3px;
+}

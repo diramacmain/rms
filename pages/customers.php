@@ -2,7 +2,7 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">Customers</h4>
-                  <p class="card-category">list of my customers</p>
+                  <p class="card-category">list of my customers <a style="" class="btn float-right card-btn">Add Customer</a></p>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">

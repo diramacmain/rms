@@ -7,126 +7,44 @@
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table">
-                      <thead class=" text-primary">
-                        <th>
-                          ID
-                        </th>
-                        <th>
-                          Name
-                        </th>
-                        <th>
-                          Country
-                        </th>
-                        <th>
-                          City
-                        </th>
-                        <th>
-                          Salary
-                        </th>
+                    <thead class="text-primary">
+                        <tr>
+                          <th>ReqId</th>
+                          <th>EBU Member</th>
+                          <th>Date of request</th>
+                          <th>Amount</th>
+                          <th>Request Type</th>
+                          <th>Status</th>
+                          <th>Comments</th>
+                        </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>
-                            1
-                          </td>
-                          <td>
-                            Dakota Rice
-                          </td>
-                          <td>
-                            Niger
-                          </td>
-                          <td>
-                            Oud-Turnhout
-                          </td>
-                          <td class="text-primary">
-                            $36,738
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            Minerva Hooper
-                          </td>
-                          <td>
-                            Curaçao
-                          </td>
-                          <td>
-                            Sinaai-Waas
-                          </td>
-                          <td class="text-primary">
-                            $23,789
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            3
-                          </td>
-                          <td>
-                            Sage Rodriguez
-                          </td>
-                          <td>
-                            Netherlands
-                          </td>
-                          <td>
-                            Baileux
-                          </td>
-                          <td class="text-primary">
-                            $56,142
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            Philip Chaney
-                          </td>
-                          <td>
-                            Korea, South
-                          </td>
-                          <td>
-                            Overland Park
-                          </td>
-                          <td class="text-primary">
-                            $38,735
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            5
-                          </td>
-                          <td>
-                            Doris Greene
-                          </td>
-                          <td>
-                            Malawi
-                          </td>
-                          <td>
-                            Feldkirchen in Kärnten
-                          </td>
-                          <td class="text-primary">
-                            $63,542
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            6
-                          </td>
-                          <td>
-                            Mason Porter
-                          </td>
-                          <td>
-                            Chile
-                          </td>
-                          <td>
-                            Gloucester
-                          </td>
-                          <td class="text-primary">
-                            $78,615
-                          </td>
-                        </tr>
+                      <tr>
+                        <td>230</td>
+                        <td>Jack</td>
+                        <td>18/082020</td>
+                        <td>R1885.65</td>
+                        <td>Loan</td>
+                        <td>Approved
+                          <!--<a class="dropdown-toggle" href="#" id="statusDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Approved</a>
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="statusDropdown">
+                            <a class="dropdown-item" href="#">Approved</a>
+                            <a class="dropdown-item" href="#">Disbursed</a>
+                            <a class="dropdown-item" href="#">Canceled</a>
+                            <a class="dropdown-item" href="#">Rejected</a>
+                          </div>-->
+                        </td>
+                        <td> </td>
+                      </tr>
+                      <tr>
+                        <td>230</td>
+                        <td>Henry</td>
+                        <td>17/082020</td>
+                        <td>R1200.65</td>
+                        <td>Emergency</td>
+                        <td>Approved</td>
+                        <td> </td>
+                      </tr>
                       </tbody>
                     </table>
                   </div>

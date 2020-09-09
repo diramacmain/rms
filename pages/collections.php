@@ -2,8 +2,8 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">My Collections</h4>
-                  <p class="card-category">list of my collections</p>
-                  <a style="" class="btn float-right card-btn">view all collections</a>
+                  <p class="card-category">list of my collections <a style="" class="btn float-right card-btn">view all collections</a></p>
+                  
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">

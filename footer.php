@@ -21,6 +21,11 @@
       </footer>
     </div>
   </div>
+  <script type="text/javascript">
+    $('.num09').keyup(function () { 
+      this.value = this.value.replace(/[^0-9\.]/g,'');
+    });
+</script>
 </body>
 
 </html>

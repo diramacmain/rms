@@ -3,7 +3,6 @@ if(isset($_POST['searchn'])){
     require 'sitedb.inc.php';
     $mobile = $_POST['mobile'];
     $sql = "SELECT * FROM tcustomers WHERE CellNumber = ?";
-
     $stmt = mysqli_stmt_init($conn2);
         if(!mysqli_stmt_prepare($stmt, $sql)){
             header("location:../index.php?page=request_loan&error=sqlerror");
@@ -18,7 +17,6 @@ if(isset($_POST['searchn'])){
                 $surname = $row['Surname'];
                 $idnumber = $row['idNumber'];
                 $cid = $row['cID'];
-                
             }
             else
             {

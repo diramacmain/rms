@@ -21,7 +21,7 @@ if(isset($_POST['submit'])){
         }
         mysqli_stmt_close($stmt);
         mysqli_close($conn2);
-    header("location:../index.php?page=request_loan&success");
+    header("location:../index.php?page=request_loan&success=customeradded");
     exit();
 }
 else{

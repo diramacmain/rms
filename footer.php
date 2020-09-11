@@ -26,6 +26,17 @@
       this.value = this.value.replace(/[^0-9\.]/g,'');
     });
 </script>
+<script type="text/javascript">
+	var urlParams = new URLSearchParams(window.location.search);
+	var success = urlParams.get('success');
+  var error = urlParams.get('error');
+	if(success == "customeradded"){
+		alert("Customer Added");
+	}
+  if(error=="numnotfound"){
+    alert("Client does not exist, please add new client below");
+  }
+</script>
 </body>
 
 </html>

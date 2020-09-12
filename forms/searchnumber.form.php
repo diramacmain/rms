@@ -15,6 +15,7 @@ if($_GET['success']="userfound"){
             $s = $_GET['s'];
             $m = $_GET['m'];
             $i = $_GET['i'];
+            $c = $_GET['c'];
             require "userfoundtable.form.php";
             $_GET['success'] = "";
         }

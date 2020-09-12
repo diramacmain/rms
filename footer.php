@@ -34,6 +34,8 @@
 		alert("Customer Added");
 	}
   if(error=="numnotfound"){
+
+    
     alert("Client does not exist, please add new client below");
   }
 </script>

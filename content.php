@@ -13,6 +13,7 @@
                 elseif($_GET['page']=='allcostomers'){require './pages/allcostomers.php';}
                 elseif($_GET['page']=='profile'){require './pages/profile.php';}
                 elseif($_GET['page']=='request_loan'){require './pages/requestloan.php';}
+                elseif($_GET['page']=='request_list'){require './pages/requestlist.php';}
                 else {require './pages/dashboard.php';}
             }
             else {require './pages/dashboard.php';}

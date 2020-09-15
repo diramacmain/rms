@@ -4,7 +4,7 @@ if(isset($_POST['searchn'])){
     $mobile = $_POST['mobile'];
 
 
-    $sql = "SELECT * FROM tcustomers WHERE CellNumber = ?";
+    $sql = "SELECT * FROM tcustomers WHERE Mobile = ?";
     $stmt = mysqli_stmt_init($conn2);
         if(!mysqli_stmt_prepare($stmt, $sql)){
             header("location:../index.php?page=request_loan&error=sqlerror");
@@ -26,7 +26,7 @@ if(isset($_POST['searchn'])){
                 $s = $row['Surname'];
                 $i = $row['IdNumber'];
                 $c = $row['cID'];
-                $m = $row['CellNumber'];
+                $m = $row['Mobile'];
             }
         }
     header("location:../index.php?page=request_loan&success=userfound&n=".$n."&s=".$s."&i=".$i."&c=".$c."&m=".$m);

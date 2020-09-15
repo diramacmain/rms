@@ -22,8 +22,14 @@ function activePage($page)
         <p>Request Loan</p>
     </a>
 </li>
-
-<!-- <li class="nav-item <?php activePage("requests");?>">
+<li class="nav-item <?php activePage("request_list");?>">
+    <a class="nav-link" href="./index.php?page=request_list">
+        <i class="material-icons">assignment</i>
+        <p>Request List</p>
+    </a>
+</li>
+<!--
+ <li class="nav-item <?php activePage("requests");?>">
     <a class="nav-link" href="./index.php?page=requests">
         <i class="material-icons">assignment</i>
         <p>Requests</p>

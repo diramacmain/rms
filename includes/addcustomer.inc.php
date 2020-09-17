@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
     $idNumber = $_POST['idNumber'];
     $customerType = 3;
 
-    $sql ="INSERT INTO tcustomers(Name, Surname, IdNumber, CellNumber, CustomerType) VALUES (?,?,?,?,?)";
+    $sql ="INSERT INTO tcustomers(Name, Surname, IdNumber, Mobile, CustomerType) VALUES (?,?,?,?,?)";
     $stmt = mysqli_stmt_init($conn2);
         if(!mysqli_stmt_prepare($stmt, $sql)){
             header("location:../index.php?page=request_loan&error=sqlerror");

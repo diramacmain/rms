@@ -24,3 +24,25 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 3px;
 }
+a.btnRLEdit{
+    border:solid;
+    border-width: 1px;
+    padding:5px;
+    border-radius: 15px;
+}
+a.btnRLEdit:hover{
+    color:white;
+    background-color:#9c27b0;
+    border-color: #9c27b0;
+}
+.editPageTable select, .editPageTable textarea{
+    padding:2px;
+    border-color: rgb(180,180,180);
+    border-radius: 3px;
+}
+.editPageTable textarea{
+    width:250px;
+}
+.btn-submit{
+    color:#9c27b0;
+}

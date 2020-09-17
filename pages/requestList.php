@@ -23,12 +23,14 @@ $result = $conn2->query($sql);
                         <th>Request Type</th>
                         <th>Status</th>
                         <th>Comments</th>
+                        <th>Edit</th>
                       </thead>
                       <tbody>
                         <?php
                         if($result->num_rows > 0){
                             while($row = $result->fetch_assoc()){
-                                echo "<tr><td>".$row['reqID']."</td><td>".$row['UserCreated']."</td><td>".$row['ClientID']."</td><td>".$row['StartDate']."</td><td>".$row['reqAmount']."</td><td>".$row['vchRequestType']."</td><td>".$row['vchRequestStatus']."</td><td>".$row['Comments']."</td></tr>";
+                                $startDate = substr($row['StartDate'],0,10);
+                                echo "<tr><td>".$row['reqID']."</td><td>".$row['UserCreated']."</td><td>".$row['ClientID']."</td><td>".$startDate."</td><td>".$row['reqAmount']."</td><td>".$row['vchRequestType']."</td><td>".$row['vchRequestStatus']."</td><td>".$row['Comments']."</td><td><a href="."./index.php?page=request_edit_page&reqID=".$row['reqID']."&m=".$row['UserCreated']."&cID=".$row['ClientID']."&RS=".$row['vchRequestStatus']." class="."btnRLEdit".">edit <i class="."material-icons".">build_circle</i></a></td></tr>";
                             }
                         } else {
                             echo "no results";

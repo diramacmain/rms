@@ -7,6 +7,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
    <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css"/>
@@ -23,8 +24,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- Material Kit CSS -->
   <link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
-
- 
+  <script type="text/javascript" src="assets\js\plugins\jquery.dataTables.min.js"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+<script type="text/javascript" src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script> -->
 </head>
 
 <body>
@@ -92,6 +94,7 @@
                 if(isset($_SESSION['userId']))
                 {
                   echo $_SESSION['userName'];
+                  echo $_SESSION['CustomerType'];
                 }
                 else{
                   echo "username";

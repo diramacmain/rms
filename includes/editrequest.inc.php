@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
     $sql ="UPDATE trequests SET lastActor = ?, ReqStatus = ?, StatusChangeDate = CURRENT_TIMESTAMP(), Comments = ?  WHERE reqID = ?;";
     $stmt = mysqli_stmt_init($conn2);
         if(!mysqli_stmt_prepare($stmt, $sql)){
-            header("location:../index.php?page=request_loan&error=sqlerror");
+            header("location:../index.php?page=request_list&error=sqlerror");
             exit();
             }
         else{
@@ -19,10 +19,10 @@ if(isset($_POST['submit'])){
         }
         mysqli_stmt_close($stmt);
         mysqli_close($conn2);
-    header("location:../index.php?page=request_loan&success=statuschanged");
+    header("location:../index.php?page=request_list&success=statuschanged");
     exit();
 }
 else{
-    header("location:../index.php?page=request_loan&error=statusnotchanged");
+    header("location:../index.php?page=request_list&error=statusnotchanged");
     exit();
 }

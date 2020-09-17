@@ -13,7 +13,7 @@ $result = $conn2->query($sql);
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
-                    <table class="table">
+                    <table id="reqlistTable" class="table">
                       <thead class=" text-primary">
                         <th>ReqId</th>
                         <th>Member</th>
@@ -30,7 +30,12 @@ $result = $conn2->query($sql);
                         if($result->num_rows > 0){
                             while($row = $result->fetch_assoc()){
                                 $startDate = substr($row['StartDate'],0,10);
-                                echo "<tr><td>".$row['reqID']."</td><td>".$row['UserCreated']."</td><td>".$row['ClientID']."</td><td>".$startDate."</td><td>".$row['reqAmount']."</td><td>".$row['vchRequestType']."</td><td>".$row['vchRequestStatus']."</td><td>".$row['Comments']."</td><td><a href="."./index.php?page=request_edit_page&reqID=".$row['reqID']."&m=".$row['UserCreated']."&cID=".$row['ClientID']."&RS=".$row['vchRequestStatus']." class="."btnRLEdit".">edit <i class="."material-icons".">build_circle</i></a></td></tr>";
+                                if($row['vchRequestStatus'] == "Disbursed" && $_SESSION['CustomerType']==2){
+                                  $hide="hidden";
+                                } else{
+                                  $hide =""; 
+                                }
+                                echo "<tr><td>".$row['reqID']."</td><td>".$row['UserCreated']."</td><td>".$row['ClientID']."</td><td>".$startDate."</td><td>".$row['reqAmount']."</td><td>".$row['vchRequestType']."</td><td>".$row['vchRequestStatus']."</td><td>".$row['Comments']."</td><td><a ".$hide." href="."./index.php?page=request_edit_page&reqID=".$row['reqID']."&m=".$row['UserCreated']."&cID=".$row['ClientID']."&RS=".$row['vchRequestStatus']." class="."btnRLEdit".">edit <i class="."material-icons".">build_circle</i></a></td></tr>";
                             }
                         } else {
                             echo "no results";
@@ -43,3 +48,8 @@ $result = $conn2->query($sql);
                 </div>
               </div>
             </div>
+            <script>
+            $(document).ready( function () {
+                  $('#reqlistTable').DataTable();
+              } );
+            </script>

@@ -38,9 +38,7 @@
     
     alert("Client does not exist, please add new client below");
   }
-    $(document).ready( function () {
-      $('#reqlistTable').DataTable();
-  } );
+    
 </script>
 </body>
 

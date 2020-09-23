@@ -28,12 +28,19 @@ function activePage($page)
         <p>Request List</p>
     </a>
 </li>
+<li class="nav-item <?php activePage("payments");?>">
+    <a class="nav-link" href="./index.php?page=payments">
+        <i class="material-icons">payment</i>
+        <p>Payments</p>
+    </a>
+</li>
 <li class="nav-item <?php activePage("collections");?>">
     <a class="nav-link" href="./index.php?page=collections">
         <i class="material-icons">content_paste</i>
         <p>Collections</p>
     </a>
 </li>
+
 <!--
  <li class="nav-item <?php activePage("requests");?>">
     <a class="nav-link" href="./index.php?page=requests">

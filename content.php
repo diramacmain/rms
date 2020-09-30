@@ -16,7 +16,9 @@
                 elseif($_GET['page']=='request_list'){require './pages/requestlist.php';}
                 elseif($_GET['page']=='payments'){require './pages/payments.php';}
                 elseif($_GET['page']=='request_edit_page'){require './pages/requestEditPage.php';}
-                else {require './pages/dashboard.php';}
+                elseif($_GET['page']=='loan_payment'){require './pages/loanPayment.php';}
+                else {require './pages/dashboard.php';} 
+                
             }
             else {require './pages/dashboard.php';}
             ?>

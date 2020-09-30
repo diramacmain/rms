@@ -23,7 +23,7 @@ $result = $conn2->query($sql);
                         <th>Request Type</th>
                         <th>Status</th>
                         <th>Comments</th>
-                        <th>Edit</th>
+                        <th>Pay</th>
                       </thead>
                       <tbody>
                         <?php
@@ -35,7 +35,7 @@ $result = $conn2->query($sql);
                                 } else{
                                   $hide =""; 
                                 }
-                                echo "<tr><td>".$row['reqID']."</td><td>".$row['UserCreated']."</td><td>".$row['ClientID']."</td><td>".$startDate."</td><td>R ".$row['reqAmount']."</td><td>".$row['vchRequestType']."</td><td>".$row['vchRequestStatus']."</td><td>".$row['Comments']."</td><td><a ".$hide." href="."./index.php?page=request_edit_page&reqID=".$row['reqID']."&m=".$row['UserCreated']."&cID=".$row['ClientID']."&RS=".$row['vchRequestStatus']." class="."btnRLEdit".">Pay <i class="."material-icons".">payment</i></a></td></tr>";
+                                echo "<tr><td>".$row['reqID']."</td><td>".$row['UserCreated']."</td><td>".$row['ClientID']."</td><td>".$startDate."</td><td>R ".$row['reqAmount']."</td><td>".$row['vchRequestType']."</td><td>".$row['vchRequestStatus']."</td><td>".$row['Comments']."</td><td><a ".$hide." href="."./index.php?page=loan_payment&reqID=".$row['reqID']."&m=".$row['UserCreated']."&cID=".$row['ClientID']."&RS=".$row['vchRequestStatus']." class="."btnRLEdit".">Pay <i class="."material-icons".">payment</i></a></td></tr>";
                             }
                         } else {
                             echo "no results";
@@ -60,8 +60,7 @@ $result = $conn2->query($sql);
                     <table id="reqlistTable" class="table">
                       <thead class=" text-primary">
                         <th>ReqId</th>
-                        <th>Member</th>
-                        <th>Client ID</th>
+                        <th>Client Name</th>
                         <th>Date of Request</th>
                         <th>Amount</th>
                         <th>Request Type</th>
@@ -79,7 +78,7 @@ $result = $conn2->query($sql);
                                 } else{
                                   $hide =""; 
                                 }
-                                echo "<tr><td>".$row['reqID']."</td><td>".$row['UserCreated']."</td><td>".$row['ClientID']."</td><td>".$startDate."</td><td>R ".$row['reqAmount']."</td><td>".$row['vchRequestType']."</td><td>".$row['vchRequestStatus']."</td><td>".$row['Comments']."</td><td><a ".$hide." href="."./index.php?page=request_edit_page&reqID=".$row['reqID']."&m=".$row['UserCreated']."&cID=".$row['ClientID']."&RS=".$row['vchRequestStatus']." class="."btnRLEdit".">edit <i class="."material-icons".">build_circle</i></a></td></tr>";
+                                echo "<tr><td>".$row['reqID']."</td><td>".$row['UserCreated']."</td><td>".$row['ClientID']."</td><td>".$startDate."</td><td>R ".$row['reqAmount']."</td><td>".$row['vchRequestType']."</td><td>".$row['vchRequestStatus']."</td><td>".$row['Comments']."</td><td><a ".$hide." href="."./index.php?page=loan_payment&reqID=".$row['reqID']."&m=".$row['UserCreated']."&cID=".$row['ClientID']."&RS=".$row['vchRequestStatus']." class="."btnRLEdit".">edit <i class="."material-icons".">build_circle</i></a></td></tr>";
                             }
                         } else {
                             echo "no results";

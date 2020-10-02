@@ -3,7 +3,6 @@ $reqID = $_GET['R'];
 $name = $_GET['N'];
 $ExpectedAmount = $_GET['XA'];
 $totalPaid = $_GET['TP'];
-$cID = $_GET['cID'];
 $balance = $ExpectedAmount - $totalPaid;
 ?>
 

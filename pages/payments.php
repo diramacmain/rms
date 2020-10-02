@@ -32,7 +32,7 @@ $result = $conn2->query($sql);
                                 $startDate = substr($row['ActivationDate'],0,10);
                                 $queryParam = "&R=".$row['reqID']."&N=".$row['ClientName']."&XA=".$row['ExpAmount']."&TP=".$row['totalPaid'];
 
-                                echo "<tr><td>".$row['reqID']."</td><td>".$row['UserCreated']."</td><td>".$row['ClientID']."</td><td>".$startDate."</td><td>R ".$row['ExpAmount']."</td><td>".$row['totalPaid']."</td><td>".$row['LoanPeriod']."</td><td>status</td><td>Coments</td><td><a href="."./index.php?page=loan_payment".$queryParam.""." class="."btnRLEdit".">Pay <i class="."material-icons".">payment</i></a></td></tr>";
+                                echo "<tr><td>".$row['reqID']."</td><td>".$row['UserCreated']."</td><td>".$startDate."</td><td>R ".$row['ExpAmount']."</td><td>".$row['totalPaid']."</td><td>".$row['LoanPeriod']."</td><td>status</td><td>Coments</td><td><a href="."./index.php?page=loan_payment".$queryParam.""." class="."btnRLEdit".">Pay <i class="."material-icons".">payment</i></a></td></tr>";
                             }
                         } else {
                             echo "no results";

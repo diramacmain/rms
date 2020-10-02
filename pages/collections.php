@@ -1,3 +1,10 @@
+<?php 
+require './includes/sitedb.inc.php'; 
+$sql = "SELECT * FROM tcollections";
+$result = $conn2->query($sql);
+
+?>
+
 <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
@@ -11,121 +18,42 @@
                           ID
                         </th>
                         <th>
-                          Name
+                          Client Name
                         </th>
                         <th>
-                          Country
+                          ClientID
                         </th>
                         <th>
-                          City
+                          Activation Date
                         </th>
                         <th>
-                          Salary
+                          Loan Amount
+                        </th>
+                        <th>
+                          Expected Amount
+                        </th>
+                        <th>
+                          Installements
+                        </th>
+                        <th>
+                          Total Paid
+                        </th>
+                        <th>
+                          Outstanding
                         </th>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>
-                            1
-                          </td>
-                          <td>
-                            Dakota Rice
-                          </td>
-                          <td>
-                            Niger
-                          </td>
-                          <td>
-                            Oud-Turnhout
-                          </td>
-                          <td class="text-primary">
-                            $36,738
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            Minerva Hooper
-                          </td>
-                          <td>
-                            Curaçao
-                          </td>
-                          <td>
-                            Sinaai-Waas
-                          </td>
-                          <td class="text-primary">
-                            $23,789
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            3
-                          </td>
-                          <td>
-                            Sage Rodriguez
-                          </td>
-                          <td>
-                            Netherlands
-                          </td>
-                          <td>
-                            Baileux
-                          </td>
-                          <td class="text-primary">
-                            $56,142
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            Philip Chaney
-                          </td>
-                          <td>
-                            Korea, South
-                          </td>
-                          <td>
-                            Overland Park
-                          </td>
-                          <td class="text-primary">
-                            $38,735
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            5
-                          </td>
-                          <td>
-                            Doris Greene
-                          </td>
-                          <td>
-                            Malawi
-                          </td>
-                          <td>
-                            Feldkirchen in Kärnten
-                          </td>
-                          <td class="text-primary">
-                            $63,542
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            6
-                          </td>
-                          <td>
-                            Mason Porter
-                          </td>
-                          <td>
-                            Chile
-                          </td>
-                          <td>
-                            Gloucester
-                          </td>
-                          <td class="text-primary">
-                            $78,615
-                          </td>
-                        </tr>
+                      <?php
+                        if($result->num_rows > 0){
+                            while($row = $result->fetch_assoc()){
+                                $ActiveDate = substr($row['ActivationDate'],0,10);
+                                echo "<tr><td>".$row['reqID']."</td><td>".$row['ClientName']."</td><td>".$row['ClientID']."</td><td>".$ActiveDate."</td><td>R ".$row['reqAmount']."</td><td>R ".$row['ExpAmount']."</td><td>R ".$row['Installments']."</td><td>R ".$row['totalPaid']."</td><td>R ".$row['Outstanding']."</td></tr>";
+                            }
+                        } else {
+                            echo "no results";
+                        }
+                        $conn2->close();
+                        ?>
                       </tbody>
                     </table>
                   </div>

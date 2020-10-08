@@ -27,6 +27,7 @@
     });
 </script>
 <script type="text/javascript">
+$(document).ready(function(){
 	var urlParams = new URLSearchParams(window.location.search);
 	var success = urlParams.get('success');
   var error = urlParams.get('error');
@@ -34,10 +35,11 @@
 		alert("Customer Added");
 	}
   if(error=="numnotfound"){
-
-    
     alert("Client does not exist, please add new client below");
+    $('#addClientForm').show();
   }
+});
+
     
 </script>
 </body>

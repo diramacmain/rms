@@ -47,5 +47,7 @@ a.btnRLEdit:hover{
     color:#9c27b0;
     background-color: white;
     border-color:#9c27b0;
-    ma
+}
+#addClientForm{
+    display: none;
 }

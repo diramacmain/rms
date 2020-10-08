@@ -5,7 +5,6 @@ $ExpectedAmount = $_GET['XA'];
 $totalPaid = $_GET['TP'];
 $balance = $ExpectedAmount - $totalPaid;
 ?>
-
 <div class="col-md-12">
               <div class="card">
               <div class="card-header card-header-primary">

@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <form class="col-sm-12" id="addClientForm" action="./includes/addcustomer.inc.php" method="POST">
   <div class="form-group">
       <h3>Add Client <i class="material-icons">add_circle_outline</i></h3>

@@ -8,7 +8,6 @@ if(isset($_POST['submit'])){
     $currentuser = $_SESSION['userId'];
     $balance = $_POST['balance'];
     $ReqStatus = 5;
-
     $sql ="INSERT INTO tpaymants(req_Id,amount,Req_Status,Last_Action_User,payment_Date,Last_Action_Date) VALUES (?,?,?,?,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP())";
     $stmt = mysqli_stmt_init($conn2);
         if(!mysqli_stmt_prepare($stmt, $sql)){

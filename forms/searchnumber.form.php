@@ -1,4 +1,4 @@
-<form class="col-sm-12" id="addClientForm" action="./includes/searchn.inc.php" method="post">
+<form class="col-sm-12" id="searchClientForm" action="./includes/searchn.inc.php" method="post">
   <div class="form-group">
       <h3>Mobile Number:<i class="material-icons">add_circle_outline</i></h3>
       <input type="text" class="form-contol num09" name="mobile" maxlength="10"  placeholder="Cell Number:" required />

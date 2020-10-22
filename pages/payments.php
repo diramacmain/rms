@@ -33,7 +33,6 @@ $resultPay = $conn2->query($sqlPay);
                   while($row = $result->fetch_assoc()){
                       $startDate = substr($row['ActivationDate'],0,10);
                       $queryParam = "&R=".$row['reqID']."&N=".$row['ClientName']."&XA=".$row['ExpAmount']."&TP=".$row['TotalPaid'];
-
                       echo "<tr><td>".$row['reqID']."</td><td>".$row['Member']."</td><td>".$startDate."</td><td>R ".$row['ExpAmount']."</td><td>".$row['TotalPaid']."</td><td>".$row['vchloanPeriod']."</td><td>status</td><td>Coments</td><td><a href="."./index.php?page=loan_payment".$queryParam.""." class="."btnRLEdit".">Pay <i class="."material-icons".">payment</i></a></td></tr>";
                   }
               } else {
@@ -57,7 +56,6 @@ $resultPay = $conn2->query($sqlPay);
             <thead class=" text-primary">
               <th>Payment_id </th>
               <th>req_Id</th>
-              <th>Payment number</th>
               <th>Amount</th>
               <th>Payment Date</th>
             </thead>
@@ -69,7 +67,7 @@ $resultPay = $conn2->query($sqlPay);
               if($resultPay->num_rows > 0){
                   while($rowp = $resultPay->fetch_assoc()){
                       $paymentDate = substr($rowp['payment_Date'],0,10);
-                      echo "<tr><td>".$rowp['payment_id']."</td><td>".$rowp['req_Id']."</td><td>".$rowp['payment_number']."</td><td>R ".$rowp['amount']."</td><td>".$paymentDate."</td></tr>";
+                      echo "<tr><td>".$rowp['payment_id']."</td><td>".$rowp['req_Id']."</td><td>R ".$rowp['amount']."</td><td>".$paymentDate."</td></tr>";
                   }
               } else {
                   echo "no results";

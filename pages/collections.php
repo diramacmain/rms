@@ -1,6 +1,6 @@
 <?php 
 require './includes/sitedb.inc.php'; 
-$sql = "SELECT * FROM tcollections";
+$sql = "SELECT * FROM vcollections";
 $result = $conn2->query($sql);
 
 ?>
@@ -27,7 +27,7 @@ $result = $conn2->query($sql);
                           Activation Date
                         </th>
                         <th>
-                          Loan Amount
+                        loan Period
                         </th>
                         <th>
                           Expected Amount
@@ -41,13 +41,16 @@ $result = $conn2->query($sql);
                         <th>
                           Outstanding
                         </th>
+                        <th>
+                          loan Status
+                        </th>
                       </thead>
                       <tbody>
                       <?php
                         if($result->num_rows > 0){
                             while($row = $result->fetch_assoc()){
                                 $ActiveDate = substr($row['ActivationDate'],0,10);
-                                echo "<tr><td>".$row['reqID']."</td><td>".$row['ClientName']."</td><td>".$row['ClientID']."</td><td>".$ActiveDate."</td><td>R ".$row['reqAmount']."</td><td>R ".$row['ExpAmount']."</td><td>R ".$row['Installments']."</td><td>R ".$row['totalPaid']."</td><td>R ".$row['Outstanding']."</td></tr>";
+                                echo "<tr><td>".$row['reqID']."</td><td>".$row['ClientName']."</td><td>".$row['ClientID']."</td><td>".$ActiveDate."</td><td>".$row['vchloanPeriod']."</td><td>R ".$row['ExpAmount']."</td><td>R ".$row['Installments']."</td><td>R ".$row['TotalPaid']."</td><td>R ".$row['Outstanding']."</td><td>".$row['vchloanStatus']."</td></tr>";
                             }
                         } else {
                             echo "no results";

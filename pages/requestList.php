@@ -30,7 +30,7 @@ $result = $conn2->query($sql);
                         if($result->num_rows > 0){
                             while($row = $result->fetch_assoc()){
                                 $startDate = substr($row['StartDate'],0,10);
-                                if($row['vchRequestStatus'] == "Disbursed" && $_SESSION['CustomerType']==2){
+                                if($row['vchRequestStatus'] == "Disbursed" && $_SESSION['CustomerType']=="2"){
                                   $hide="hidden";
                                 } else{
                                   $hide =""; 

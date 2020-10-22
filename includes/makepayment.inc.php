@@ -7,15 +7,15 @@ if(isset($_POST['submit'])){
     $payment = $_POST['payment'];
     $currentuser = $_SESSION['userId'];
     $balance = $_POST['balance'];
-    $ReqStatus = 5;
-    $sql ="INSERT INTO tpaymants(req_Id,amount,Req_Status,Last_Action_User,payment_Date,Last_Action_Date) VALUES (?,?,?,?,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP())";
+    
+    $sql ="INSERT INTO tpayments(req_Id,amount,Last_Action_User,payment_Date) VALUES (?,?,?,CURRENT_TIMESTAMP())";
     $stmt = mysqli_stmt_init($conn2);
         if(!mysqli_stmt_prepare($stmt, $sql)){
             header("location:../index.php?page=payments&error=sqlerror");
             exit();
             }
         else{
-            mysqli_stmt_bind_param($stmt,"idii",$reqID,$payment,$ReqStatus,$currentuser);
+            mysqli_stmt_bind_param($stmt,"idi",$reqID,$payment,$currentuser);
             mysqli_stmt_execute($stmt);
         }
         mysqli_stmt_close($stmt);
